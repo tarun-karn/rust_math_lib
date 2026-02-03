@@ -1,0 +1,1 @@
+/media/tarun/Tarun/code/lfx/rust_math_lib/target/debug/librust_math_lib.rlib: /media/tarun/Tarun/code/lfx/rust_math_lib/src/lib.rs /media/tarun/Tarun/code/lfx/rust_math_lib/src/math/mod.rs /media/tarun/Tarun/code/lfx/rust_math_lib/src/math/operations.rs
