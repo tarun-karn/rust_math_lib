@@ -62,21 +62,6 @@ rust_math_lib/
 ├── screenshots/            # Demo screenshots
 └── README.md
 
-
----
-
-## Prerequisites
-
-- Rust (stable)
-- wasm-pack
-- Python (for local server)
-
-Install wasm-pack:
-
-```bash
-cargo install wasm-pack
-````
-
 ---
 
 ## Build Instructions
