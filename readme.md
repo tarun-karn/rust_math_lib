@@ -45,6 +45,7 @@ The following screenshots demonstrate the calculator running in the browser, wit
 ---
 
 ## Project Structure
+```text
 rust_math_lib/
 ├── Cargo.toml
 ├── src/
