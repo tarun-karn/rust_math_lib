@@ -26,6 +26,24 @@ This project demonstrates how core Rust logic can be exposed to the web using `w
 
 ---
 
+## Working Demo (Screenshots)
+
+The following screenshots demonstrate the calculator running in the browser, with Rust logic executed via WebAssembly and results rendered on the UI.
+
+### ➕ Addition
+![Addition](./screenshots/add.png)
+
+### ➖ Subtraction
+![Subtraction](./screenshots/subtract.png)
+
+### ✖️ Multiplication
+![Multiplication](./screenshots/multiply.png)
+
+### ➗ Division
+![Division](./screenshots/divide.png)
+
+---
+
 ## 📁 Project Structure
 
 ```
@@ -34,13 +52,16 @@ rust_math_lib/
 ├── Cargo.toml
 ├── src/
 │   ├── lib.rs              # WASM entry point
+│   ├── main.rs             # CLI entry (optional)
 │   └── math/
 │       ├── mod.rs
 │       └── operations.rs  # Core math logic
 ├── pkg/                    # Generated WASM output
-└── www/
-├── index.html          # UI
-└── index.js            # JS ↔ WASM bridge
+├── public/                 # Static files for deployment
+│   ├── index.html          # UI
+│   ├── index.js            # JS ↔ WASM bridge
+│   └── pkg/                # WASM files served to browser
+└── screenshots/            # Demo screenshots
 
 ````
 
@@ -53,6 +74,7 @@ rust_math_lib/
 - Python (for local server)
 
 Install wasm-pack:
+
 ```bash
 cargo install wasm-pack
 ````
@@ -71,9 +93,10 @@ This generates the WASM files inside the `pkg/` directory.
 
 ---
 
-## Run in Browser
+## Run in Browser (Local)
 
 ```bash
+cd public
 python3 -m http.server
 ```
 
@@ -99,8 +122,8 @@ pub fn calculate(operation: &str, a: f64, b: f64) -> Result<f64, String>
 ### Example (JavaScript)
 
 ```js
-calculate("add", 10, 5); // 15
-calculate("divide", 10, 0); // Error
+calculate("add", 10, 5);      // 15
+calculate("divide", 10, 0);   // Error: Division by zero
 ```
 
 ---
@@ -110,7 +133,5 @@ calculate("divide", 10, 0); // Error
 * Rust module organization
 * Difference between `lib.rs` and `main.rs`
 * Compiling Rust to WebAssembly
-* JS ↔ Rust interoperability
+* JavaScript ↔ Rust interoperability
 * Error handling across language boundaries
-
----
