@@ -59,7 +59,7 @@ cargo install wasm-pack
 
 ---
 
-##Build Instructions
+## Build Instructions
 
 From the project root:
 
