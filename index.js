@@ -1,4 +1,4 @@
-import init, { calculate } from "../pkg/rust_math_lib.js";
+import init, { calculate } from "./pkg/rust_math_lib.js";
 
 const resultDiv = document.getElementById("result");
 const btn = document.getElementById("calcBtn");

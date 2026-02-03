@@ -1,9 +1,6 @@
 mod math;
 use std ::io;
-use crate::math::operations;
-
-
-
+use math::operations;
 
 fn main() {
     println!("Welcome to Rust Math CLI !");

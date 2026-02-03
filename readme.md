@@ -44,10 +44,7 @@ The following screenshots demonstrate the calculator running in the browser, wit
 
 ---
 
-## 📁 Project Structure
-
-```
-
+📁 Project Structure
 rust_math_lib/
 ├── Cargo.toml
 ├── src/
@@ -56,14 +53,14 @@ rust_math_lib/
 │   └── math/
 │       ├── mod.rs
 │       └── operations.rs  # Core math logic
-├── pkg/                    # Generated WASM output
-├── public/                 # Static files for deployment
-│   ├── index.html          # UI
-│   ├── index.js            # JS ↔ WASM bridge
-│   └── pkg/                # WASM files served to browser
-└── screenshots/            # Demo screenshots
+├── pkg/                    # Generated WASM output (wasm-pack)
+│   ├── rust_math_lib.js
+│   └── rust_math_lib_bg.wasm
+├── index.html              # Web UI
+├── index.js                # JS ↔ WASM bridge
+├── screenshots/            # Demo screenshots
+└── README.md
 
-````
 
 ---
 
@@ -96,7 +93,6 @@ This generates the WASM files inside the `pkg/` directory.
 ## Run in Browser (Local)
 
 ```bash
-cd public
 python3 -m http.server
 ```
 
